@@ -1,0 +1,118 @@
+{% extends  'base.html' %}
+
+
+{% block content %}
+<div class="container">
+	<div class="well">
+	<div class="row">
+		<h2 style="text-align:center"> {{item.name}} </h2>
+		<br>
+		<br>
+		<div class="col-lg-8">
+			<div class="row">
+				<div class="col-lg-12" style="padding-bottom:10px">
+					<img src="{{item.photo}}" width="640px">
+				</div>
+				<div class="col-lg-12">
+					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+					    <li class="active"><a href="#home" data-toggle="tab">Description</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+					    <div class="tab-pane fade active in" id="home">
+					        <p>{{item.item_description}}</p>
+					    </div>
+    				</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+				    	<div class="panel-body">
+							<div class="list-group">
+							    <div class="list-group-item">
+							        <div class="row-action-primary">
+							            <i class="mdi-editor-attach-money"></i>
+							        </div>
+							        <div class="row-content">
+							            <div class="action-secondary"><i class="mdi-material-info"></i></div>
+							            <h4 class="list-group-item-heading">Item Prize</h4>
+							            <p class="list-group-item-text">{{item.item_price}}</p>
+							        </div>
+							    </div>
+							    <div class="list-group-separator"></div>
+							    <div class="list-group-item">
+							        <div class="row-action-primary">
+							            <i class="mdi-editor-attach-money"></i>
+							        </div>
+							        <div class="row-content">
+							            <div class="action-secondary"><i class="mdi-material-info"></i></div>
+							            <h4 class="list-group-item-heading">Tip on the Item</h4>
+							            <p class="list-group-item-text">{{item.reward_amount}}</p>
+							        </div>
+							    </div>
+							    <div class="list-group-separator"></div>
+							    <div class="list-group-item">
+							        <div class="row-action-primary">
+							            <i class="mdi-editor-attach-money"></i>
+							        </div>
+							        <div class="row-content">
+							            <div class="action-secondary"><i class="mdi-material-info"></i></div>
+							            <h4 class="list-group-item-heading">Total</h4>
+							            <p class="list-group-item-text">{{tp}}</p>
+							        </div>
+							    </div>
+							    <div class="list-group-separator"></div>
+		    				</div>
+		    				<a href="javascript:void(0)" class="btn btn-success btn-raised">Book it</a>
+		    			</div>
+		    		</div>
+
+				</div>
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Posted by
+						</div>
+						<div class="panel-body">
+				            <img class="circle" src="/media/{{uid.image}}" alt="icon" align="middle">
+				            <br><br>				            
+							<div class="list-group">
+							    <div class="list-group-item">
+							        <div class="row-action-primary">
+							            <i class="mdi-action-account-circle"></i>
+							        </div>
+							        <div class="row-content">
+							            <div class="action-secondary"><i class="mdi-material-info"></i></div>
+							            <h4 class="list-group-item-heading">Name</h4>
+							            <p class="list-group-item-text">{{uid.facebook_name}}</p>
+							        </div>
+							    </div>
+							    <div class="list-group-separator"></div>
+							<div class="list-group">
+							    <div class="list-group-item">
+							        <div class="row-action-primary">
+							            <i class="mdi-action-stars"></i>
+							        </div>
+							        <div class="row-content">
+							            <div class="action-secondary"><i class="mdi-material-info"></i></div>
+							            <h4 class="list-group-item-heading">Rating</h4>
+							            <p class="list-group-item-text">4.5/5.0</p>
+							        </div>
+							    </div>
+							    <div class="list-group-separator"></div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
